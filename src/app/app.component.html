@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <h1>Psintagram</h1>
+    <select class="from-select" (ngModelChange)="myFunc($event)" [(ngModel)]="selected">
+        <option>---wybierz rasę---</option>
+        <option *ngFor=' let n of devices '>{{n}}</option>
+    </select>
+
+    <div class="divImg">
+        <img class="img" src={{devicesImg}} alt="dogs" />
+        <pre>Poczytaj więcej o tej rasie na wikipedii: <a href="https://en.wikipedia.org/wiki/{{selected}}" target="_blank">{{selected}}</a></pre>
+    </div>
+
+
+</div>
